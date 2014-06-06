@@ -1502,8 +1502,12 @@ void QCamera2HardwareInterface::dumpFrameToFile(QCameraStream *stream,
     uint32_t skip_mode = 0;
     int mDumpFrmCnt = 0;
 
-    if (stream)
-        mDumpFrmCnt = stream->mDumpFrame;
+    if (NULL == stream) {
+        ALOGE("%s stream object is null", __func__);
+        return;
+    }
+
+    mDumpFrmCnt = stream->mDumpFrame;
 
     if(enabled & QCAMERA_DUMP_FRM_MASK_ALL) {
         if((enabled & dump_type) && stream && frame) {
@@ -1532,6 +1536,7 @@ void QCamera2HardwareInterface::dumpFrameToFile(QCameraStream *stream,
                     time_t current_time;
                     struct tm * timeinfo;
 
+                    memset(timeBuf, 0, sizeof(timeBuf));
 
                     time (&current_time);
                     timeinfo = localtime (&current_time);
