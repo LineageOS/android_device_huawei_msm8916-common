@@ -1,0 +1,2 @@
+allow wcnss_service oeminfo_server:unix_stream_socket connectto;
+allow wcnss_service socket_device:sock_file write;
