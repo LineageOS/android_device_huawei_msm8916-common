@@ -75,6 +75,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
     setenv LD_PRELOAD /vendor/lib/libqcamerasvr-c++.so
+    writepid /dev/cpuset/system-background/tasks
 
 #enable zram
 on property:ro.config.zram=true
@@ -127,6 +128,7 @@ service mpdecision /system/bin/mpdecision --avg_comp
    user root
    group system
    disabled
+   writepid /dev/cpuset/system-background/tasks
 
 #service perfd /system/vendor/bin/perfd
 #   class main
