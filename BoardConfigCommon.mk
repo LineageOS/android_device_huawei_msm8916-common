@@ -17,11 +17,6 @@
 # Product-specific compile-time definitions.
 #
 
-LOCAL_PATH := device/huawei/cherry
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := c8817d,g620s,C8817D,C8817E,G621-TL00,G620S-UL00,G620S-L01,Che1-CL10,Che1-CL20,Che1-L04
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
@@ -147,6 +142,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
+# Properties
+TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
+
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
@@ -168,9 +166,6 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 endif
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)/releasetools
-
 # Ril
 TARGET_RIL_VARIANT := caf
 
@@ -178,7 +173,7 @@ TARGET_RIL_VARIANT := caf
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-    device/huawei/cherry/sepolicy
+    device/huawei/msm8916-common/sepolicy
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
@@ -200,4 +195,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/huawei/cherry/BoardConfigVendor.mk
+-include vendor/huawei/msm8916-common/BoardConfigVendor.mk
