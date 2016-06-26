@@ -19,8 +19,6 @@ ifneq ($(filter cherry che10,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-include $(CLEAR_VARS)
-
 #Create symbolic links
 $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
         ln -sf /system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
@@ -31,9 +29,4 @@ $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
         $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat; \
         ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
         $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
-
-$(shell mkdir -p $(TARGET_OUT)/etc; \
-    ln -sf /system/etc/selective-spn-conf.xml \
-	   $(TARGET_OUT)/etc/spn-conf.xml)
-
 endif
