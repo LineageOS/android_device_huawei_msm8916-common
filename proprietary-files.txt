@@ -650,6 +650,7 @@ etc/firmware/venus.mbn
 etc/firmware/venus.mdt
 
 # Huawei
+bin/libqmi_oem_main
 bin/rmt_oeminfo
 bin/test_diag
 etc/firmware/cherry_gis_fw.img
