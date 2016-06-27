@@ -157,6 +157,7 @@ on boot
     start rmt_storage
     start test_diag
     start rmt_oeminfo
+    start libqmi_oem_main
     insmod /system/lib/modules/adsprpc.ko
 # access permission for secure touch
     chmod 0660 /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0020/secure_touch_enable
@@ -283,3 +284,8 @@ service rmt_oeminfo /system/bin/rmt_oeminfo
     user root
     disabled
     seclabel u:r:oeminfo:s0
+
+service libqmi_oem_main /system/bin/libqmi_oem_main
+    class core
+    user root
+    disabled
