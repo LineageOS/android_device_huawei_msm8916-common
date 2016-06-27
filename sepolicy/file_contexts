@@ -1,2 +1,3 @@
 /dev/block/mmcblk0p9                                  u:object_r:oeminfo_partition_device:s0
+/system/bin/libqmi_oem_main                           u:object_r:libqmi_oem_main_exec:s0
 /system/bin/rmt_oeminfo                               u:object_r:oeminfo_exec:s0
