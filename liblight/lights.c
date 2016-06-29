@@ -42,44 +42,16 @@ static struct light_state_t g_notification;
 static struct light_state_t g_battery;
 static int g_attention = 0;
 
-char const*const RED_LED_FILE
-        = "/sys/class/leds/red/brightness";
-
-char const*const GREEN_LED_FILE
-        = "/sys/class/leds/green/brightness";
-
-char const*const BLUE_LED_FILE
-        = "/sys/class/leds/blue/brightness";
-
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
-char const*const RED_BLINK_FILE
-        = "/sys/class/leds/red/blink";
-
-char const*const GREEN_BLINK_FILE
-        = "/sys/class/leds/green/blink";
-
-char const*const BLUE_BLINK_FILE
-        = "/sys/class/leds/blue/blink";
-
-char const*const RED_BLINK_ONMS_FILE
-        = "/sys/class/leds/red/onMS";
-
-char const*const GREEN_BLINK_ONMS_FILE
-        = "/sys/class/leds/green/onMS";
-
-char const*const BLUE_BLINK_ONMS_FILE
-        = "/sys/class/leds/blue/onMS";
-
-char const*const RED_BLINK_OFFMS_FILE
-        = "/sys/class/leds/red/offMS";
-
-char const*const GREEN_BLINK_OFFMS_FILE
-        = "/sys/class/leds/green/offMS";
-
-char const*const BLUE_BLINK_OFFMS_FILE
-        = "/sys/class/leds/blue/offMS";
+/* libqmi_oem_api.so */
+#define QMI_HUAWEI_NOT_ID 0x8F
+extern int oem_qmi_common_stream_from_modem_len(int id,
+                                                void *buf_in,
+                                                size_t buf_in_size,
+                                                void *buf_out,
+                                                size_t *buf_out_size);
 
 /**
  * device methods
@@ -142,6 +114,13 @@ set_light_backlight(struct light_device_t* dev,
     return err;
 }
 
+struct qmi_huawei_not {
+    unsigned int color;
+    int flashOnMS;
+    int flashOffMS;
+    int flashMode;
+} __attribute__((packed));
+
 static int
 set_speaker_light_locked(struct light_device_t* dev,
         struct light_state_t const* state)
@@ -150,6 +129,10 @@ set_speaker_light_locked(struct light_device_t* dev,
     int blink;
     int onMS, offMS;
     unsigned int colorRGB;
+    int ret;
+    struct qmi_huawei_not notifConfig;
+    size_t buf_out_size = sizeof(notifConfig);
+    char buf_out = 0;
 
     if(!dev) {
         return -1;
@@ -174,42 +157,17 @@ set_speaker_light_locked(struct light_device_t* dev,
             state->flashMode, colorRGB, onMS, offMS);
 #endif
 
-    red = (colorRGB >> 16) & 0xFF;
-    green = (colorRGB >> 8) & 0xFF;
-    blue = colorRGB & 0xFF;
+    notifConfig.color = colorRGB;
+    notifConfig.flashMode = state->flashMode;
+    notifConfig.flashOnMS = onMS;
+    notifConfig.flashOffMS = offMS;
 
-    if (onMS > 0 && offMS > 0) {
-        blink = 1;
-    } else {
-        blink = 0;
-    }
-
-    // reset blink status
-    write_int(RED_BLINK_FILE, 0);
-    write_int(GREEN_BLINK_FILE, 0);
-    write_int(BLUE_BLINK_FILE, 0);
-
-    if (blink) {
-        write_int(RED_LED_FILE, 0);
-        write_int(GREEN_LED_FILE, 0);
-        write_int(BLUE_LED_FILE, 0);
-        write_int(RED_BLINK_ONMS_FILE, onMS);
-        write_int(GREEN_BLINK_ONMS_FILE, onMS);
-        write_int(BLUE_BLINK_ONMS_FILE, onMS);
-        write_int(RED_BLINK_OFFMS_FILE, offMS);
-        write_int(GREEN_BLINK_OFFMS_FILE, offMS);
-        write_int(BLUE_BLINK_OFFMS_FILE, offMS);
-        if (red)
-            write_int(RED_BLINK_FILE, blink);
-        if (green)
-            write_int(GREEN_BLINK_FILE, blink);
-        if (blue)
-            write_int(BLUE_BLINK_FILE, blink);
-    } else {
-        write_int(RED_LED_FILE, red);
-        write_int(GREEN_LED_FILE, green);
-        write_int(BLUE_LED_FILE, blue);
-    }
+    ret = oem_qmi_common_stream_from_modem_len(QMI_HUAWEI_NOT_ID, &notifConfig,
+                                               sizeof(notifConfig), &buf_out,
+                                               &buf_out_size);
+    if (ret || buf_out_size != 1)
+        ALOGE("failed to write notification LED ret=%d buf_out_size=%d\n",
+              ret, buf_out_size);
 
     return 0;
 }
