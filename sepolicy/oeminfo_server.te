@@ -1,0 +1,13 @@
+type oeminfo_server, domain;
+type oeminfo_server_exec, exec_type, file_type;
+type oeminfo_server_partition_device, dev_type;
+init_daemon_domain(oeminfo_server)
+
+allow oeminfo_server oeminfo_partition_device:blk_file { read write open };
+allow oeminfo_server self:capability { fowner chown fsetid };
+allow oeminfo_server socket_device:dir { write add_name };
+allow oeminfo_server socket_device:sock_file { create setattr };
+
+# FIX-ME: violating neverallow, permissive instead
+#allow oeminfo_server system_file:file entrypoint;
+permissive oeminfo_server;
