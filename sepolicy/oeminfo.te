@@ -1,6 +1,8 @@
 type oeminfo, domain;
 type oeminfo_exec, exec_type, file_type;
+type oeminfo_partition_device, dev_type;
 init_daemon_domain(oeminfo)
 
-# FIX-ME: violating neverallow, permissive instead
-permissive oeminfo;
+allow oeminfo oeminfo_partition_device:blk_file { read write open };
+allow oeminfo self:socket { read bind create write ioctl };
+allow oeminfo smem_log_device:chr_file { read write ioctl open };
