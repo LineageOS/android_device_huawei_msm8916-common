@@ -277,6 +277,13 @@ on post-fs-data
     mkdir /data/misc/SelfHost/Running/ 2750 system shell
     mkdir /data/misc/SelfHost/socket/ 2770 system system
 
+service perfd /system/vendor/bin/perfd
+    class main
+    user root
+    disabled
+    socket perfd seqpacket 0666 root system
+    writepid /dev/cpuset/system-background/tasks
+
 service qcomsysd /system/bin/qcom-system-daemon
     class main
     user root
