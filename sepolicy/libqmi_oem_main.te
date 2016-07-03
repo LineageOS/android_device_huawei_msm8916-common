@@ -7,7 +7,3 @@ allow libqmi_oem_main qmuxd_socket:dir { write add_name search };
 allow libqmi_oem_main qmuxd_socket:sock_file { write create setattr };
 allow libqmi_oem_main self:capability { fsetid dac_override };
 allow libqmi_oem_main self:socket { read write ioctl create bind };
-
-# FIX-ME: violating neverallow, permissive instead
-#allow libqmi_oem_main system_file:file entrypoint;
-permissive libqmi_oem_main;
