@@ -39,11 +39,6 @@ debug.enable.sglscale=1
 #lpa.use-stagefright=true
 #persist.speaker.prot.enable=false
 
-#
-# system props for the cne module
-#
-persist.cne.feature=1
-
 #system props for the MM modules
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
