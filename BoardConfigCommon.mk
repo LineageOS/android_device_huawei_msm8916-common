@@ -22,8 +22,6 @@ VENDOR_PATH := device/huawei/msm8916-common
 # Platform
 TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
-#add suffix variable to uniquely identify the board
-TARGET_BOARD_SUFFIX := _32
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
@@ -65,7 +63,6 @@ COMMON_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_HAL_STATIC_LIBRARIES += libhealthd.msm8916
 
 # CMHW
 BOARD_HARDWARE_CLASS := \
@@ -77,11 +74,8 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/touch_screen/easy_wakeup_gesture"
 BOARD_USES_QCNE := true
 TARGET_LDPRELOAD := libNimsWrap.so
 
-#Enable HW based full disk encryption
+# Encryption
 TARGET_HW_DISK_ENCRYPTION := true
-
-# Enable sensor multi HAL
-USE_SENSOR_MULTI_HAL := true
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
@@ -90,9 +84,6 @@ COMMON_GLOBAL_CPPFLAGS += -DNO_SECURE_DISCARD
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
-
-# Fonts
-EXTENDED_FONT_FOOTPRINT := true
 
 # GPS
 TARGET_NO_RPC := true
@@ -132,6 +123,9 @@ TARGET_KERNEL_CONFIG := cyanogenmod_cherry_defconfig
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
+
+# Malloc
+MALLOC_IMPL := dlmalloc
 
 # Partitions
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -174,7 +168,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 endif
 
-# Ril
+# RIL
 TARGET_RIL_VARIANT := caf
 
 # SELinux
@@ -183,11 +177,11 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     $(VENDOR_PATH)/sepolicy
 
+# Sensors
+USE_SENSOR_MULTI_HAL := true
+
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
-
-#Use dlmalloc instead of jemalloc for mallocs
-MALLOC_IMPL := dlmalloc
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
