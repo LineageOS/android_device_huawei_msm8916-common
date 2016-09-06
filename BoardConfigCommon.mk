@@ -73,6 +73,10 @@ BOARD_HARDWARE_CLASS := \
     $(VENDOR_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/sys/touch_screen/easy_wakeup_gesture"
 
+# CNE
+BOARD_USES_QCNE := true
+TARGET_LDPRELOAD := libNimsWrap.so
+
 #Enable HW based full disk encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
