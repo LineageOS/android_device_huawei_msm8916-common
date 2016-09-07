@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fa4df85_60d1b0cd",
+        "filename": "rootdir/etc/init.qcom.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2016-09-07T11:55:55Z",
+      "side": 1,
+      "message": "Hotplug is working but the cores are hard to use, the 2 parameters need to be adjusted",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 66
+      },
+      "revId": "eaa20b43f1b9cc1c74fc46a7e398c2e11672fef1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
