@@ -120,7 +120,7 @@ TARGET_KERNEL_CONFIG := cyanogenmod_cherry_defconfig
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Malloc
-MALLOC_IMPL := dlmalloc
+MALLOC_SVELTE := true
 
 # Partitions
 TARGET_USERIMAGES_USE_EXT4 := true
