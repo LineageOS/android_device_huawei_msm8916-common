@@ -120,7 +120,7 @@ TARGET_KERNEL_CONFIG := cyanogenmod_cherry_defconfig
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Malloc
-MALLOC_IMPL := dlmalloc
+MALLOC_SVELTE := true
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
