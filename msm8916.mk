@@ -112,10 +112,6 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     Snap
 
-# CNE
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.cne.feature=1
-
 # Compat symbols
 PRODUCT_PACKAGES += \
     libhuawei_cutilz \
@@ -224,7 +220,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.qcom.zram.sh \
     init.target.rc \
     ueventd.qcom.rc
 
