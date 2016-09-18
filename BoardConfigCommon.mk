@@ -119,6 +119,9 @@ TARGET_KERNEL_CONFIG := cyanogenmod_cherry_defconfig
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Malloc
+MALLOC_SVELTE := true
+
 # Partitions
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true

@@ -27,7 +27,6 @@
 #
 #
 
-import init.carrier.rc
 import init.qcom.power.rc
 
 on early-init
@@ -123,19 +122,6 @@ service qseecomd /system/bin/qseecomd
 #   user system
 #   group system net_raw
 
-#service mpdecision /system/bin/mpdecision --avg_comp
-#   class main
-#   user root
-#   group system
-#   disabled
-#   writepid /dev/cpuset/system-background/tasks
-
-service perfd /system/vendor/bin/perfd
-   class main
-   user root
-   disabled
-   writepid /dev/cpuset/system-background/tasks
-
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
    user root
@@ -174,17 +160,6 @@ on boot
     # touchscreen
     chown system system /sys/touch_screen/glove_func/signal_disparity
     chown system system /sys/touch_screen/easy_wakeup_gesture
-
-    # leds
-    chown system system /sys/class/leds/red/blink
-    chown system system /sys/class/leds/green/blink
-    chown system system /sys/class/leds/blue/blink
-    chown system system /sys/class/leds/red/onMS
-    chown system system /sys/class/leds/green/onMS
-    chown system system /sys/class/leds/blue/onMS
-    chown system system /sys/class/leds/red/offMS
-    chown system system /sys/class/leds/green/offMS
-    chown system system /sys/class/leds/blue/offMS
 
     # NFC
     setprop ro.nfc.port "I2C"
@@ -225,13 +200,13 @@ service imsqmidaemon /system/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
-    group radio net_raw log qcom_diag
+    group radio log qcom_diag
 
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
-    group system wifi radio inet net_raw log qcom_diag net_admin
+    group system wifi radio inet log qcom_diag
     disabled
 
 on property:sys.ims.QMI_DAEMON_STATUS=1
@@ -241,13 +216,13 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
    class main
    user system
    socket ims_rtpd stream 0660 system radio
-   group radio net_raw diag qcom_diag log
+   group radio diag qcom_diag log inet
    disabled
 
 service imscmservice /system/bin/imscmservice
    class main
    user system
-   group radio net_raw diag qcom_diag log
+   group radio diag qcom_diag log
    disabled
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
@@ -266,25 +241,26 @@ service dts_configurator /system/bin/dts_configurator
    group system
    oneshot
 
+service per_mgr /system/bin/pm-service
+    class core
+    user system
+    group system net_raw
+
 service test_diag /system/bin/test_diag
     user root
     disabled
-    seclabel u:r:diag:s0
 
 service rmt_oeminfo /system/bin/rmt_oeminfo
     class core
     user root
     disabled
-    seclabel u:r:oeminfo:s0
 
 service libqmi_oem_main /system/bin/libqmi_oem_main
     class core
     user root
     disabled
-    seclabel u:r:libqmi_oem_main:s0
 
 service oeminfo_server /system/bin/oeminfo_server
     class core
     user root
     disabled
-    seclabel u:r:oeminfo_server:s0
