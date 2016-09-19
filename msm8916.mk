@@ -112,10 +112,6 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     Snap
 
-# CNE
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.cne.feature=1
-
 # Compat symbols
 PRODUCT_PACKAGES += \
     libhuawei_cutilz \
