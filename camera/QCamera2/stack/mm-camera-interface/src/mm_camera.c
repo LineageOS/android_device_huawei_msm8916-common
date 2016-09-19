@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2014, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2012-2015, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -250,14 +250,16 @@ int32_t mm_camera_open(mm_camera_obj_t *my_obj)
     uint8_t sleep_msec=MM_CAMERA_DEV_OPEN_RETRY_SLEEP;
     unsigned int cam_idx = 0;
     char t_devname[MM_CAMERA_DEV_NAME_LEN];
+    const char *temp_dev_name = mm_camera_util_get_dev_name(my_obj->my_hdl);
 
     CDBG("%s:  begin\n", __func__);
 
-    strcpy(t_devname, mm_camera_util_get_dev_name(my_obj->my_hdl));
-    if (t_devname == NULL) {
+    if (temp_dev_name == NULL) {
+        CDBG_ERROR("%s: dev name is NULL",__func__);
         rc = -1;
         goto on_error;
     }
+    strlcpy(t_devname, temp_dev_name, sizeof(t_devname));
     snprintf(dev_name, sizeof(dev_name), "/dev/%s",t_devname );
     sscanf(dev_name, "/dev/video%u", &cam_idx);
     CDBG_ERROR("%s: dev name = %s, cam_idx = %d", __func__, dev_name, cam_idx);
