@@ -520,7 +520,7 @@ vendor/lib/libcalmodule_gyroscope.so
 # Huawei
 bin/libqmi_oem_main
 bin/rmt_oeminfo
-bin/test_diag
+bin/hw_test_diag
 etc/firmware/cherry_gis_fw.img
 etc/firmware/cherry_ofilm_fw.img
 etc/firmware/cherry_yassy_fw.img
