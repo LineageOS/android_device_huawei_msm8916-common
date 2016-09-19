@@ -504,6 +504,7 @@ etc/permissions/qcrilhook.xml
 framework/qcnvitems.jar
 framework/qcrilhook.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+vendor/lib/libcneapiclient.so
 vendor/lib/libconfigdb.so
 vendor/lib/libmdmdetect.so
 vendor/lib/libnetmgr.so
