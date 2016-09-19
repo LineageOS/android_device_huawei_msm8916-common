@@ -146,7 +146,7 @@ service audiod /system/bin/audiod
 
 on boot
     start rmt_storage
-    start test_diag
+    start hw_test_diag
     start rmt_oeminfo
     start libqmi_oem_main
     start oeminfo_server
@@ -250,7 +250,7 @@ service per_mgr /system/bin/pm-service
     user system
     group system net_raw
 
-service test_diag /system/bin/test_diag
+service hw_test_diag /system/bin/hw_test_diag
     user root
     disabled
 
