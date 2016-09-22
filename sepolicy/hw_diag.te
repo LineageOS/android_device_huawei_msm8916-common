@@ -4,7 +4,7 @@ type hw_diag_exec, exec_type, file_type;
 init_daemon_domain(hw_diag)
 
 allow hw_diag self:socket { write read create ioctl bind };
-#allow hw_diag self:capability mknod;
+allow hw_diag self:capability dac_override;
 allow hw_diag smem_log_device:chr_file { read write open ioctl };
 allow hw_diag device:dir { write add_name remove_name };
 #allow hw_diag device:chr_file { create write open unlink };
