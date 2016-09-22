@@ -1,5 +1,6 @@
-/dev/block/mmcblk0p9                                  u:object_r:oeminfo_partition_device:s0
+/dev/block/bootdevice/by-name/oeminfo                 u:object_r:oeminfo_partition_device:s0
 /system/bin/libqmi_oem_main                           u:object_r:libqmi_oem_main_exec:s0
 /system/bin/rmt_oeminfo                               u:object_r:oeminfo_exec:s0
 /system/bin/oeminfo_server                            u:object_r:oeminfo_server_exec:s0
 /system/bin/hw_test_diag                              u:object_r:hw_diag_exec:s0
+/system/vendor/lib/libmmcamera_faceproc.so            u:object_r:system_data_file:s0
