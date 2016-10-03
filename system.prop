@@ -87,6 +87,7 @@ persist.data.target=dpm1
 persist.radio.no_cons_man_roam=1
 #
 # System props for bluetooh
+qcom.bluetooth.soc=smd
 # System prop to turn on hfp client
 bluetooth.hfp.client=1
 
