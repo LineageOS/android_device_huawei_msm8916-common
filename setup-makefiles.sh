@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Copyright (C) 2016 The CyanogenMod Project
+#           (C) 2016 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,6 +45,8 @@ printf '\n%s\n' "ifeq (\$(QCPATH),)" >> "$PRODUCTMK"
 printf '\n%s\n' "ifeq (\$(QCPATH),)" >> "$ANDROIDMK"
 
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt
+
+printf '\n%s\n' "\$(call inherit-product, vendor/qcom/binaries/msm8916-32/graphics/graphics-vendor.mk)" >> "$PRODUCTMK"
 
 echo "endif" >> "$PRODUCTMK"
 
