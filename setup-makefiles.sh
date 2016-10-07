@@ -45,6 +45,8 @@ printf '\n%s\n' "ifeq (\$(QCPATH),)" >> "$ANDROIDMK"
 
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt
 
+printf '\n%s\n' "\$(call inherit-product, vendor/qcom/binaries/msm8916/graphics/graphics-vendor.mk)" >> "$PRODUCTMK"
+
 echo "endif" >> "$PRODUCTMK"
 
 cat << EOF >> "$ANDROIDMK"
