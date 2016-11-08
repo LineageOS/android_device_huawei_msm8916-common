@@ -20,6 +20,9 @@
 
 VENDOR_PATH := device/huawei/msm8916-common
 
+# Use Snapdragon LLVM, if available
+TARGET_USE_SDCLANG := true
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
