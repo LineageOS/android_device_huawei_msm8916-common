@@ -28,6 +28,7 @@
  */
 
 #include <cstdlib>
+#include <cutils/properties.h>
 #include <fstream>
 #include <string>
 
@@ -45,7 +46,7 @@ void vendor_load_properties()
     std::string buf;
     int rc;
 
-    rc = property_get("ro.board.platform", platform);
+    rc = property_get("ro.board.platform", platform, NULL);
     if (!rc || !ISMATCH(platform, ANDROID_TARGET))
         return;
 
