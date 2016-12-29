@@ -37,7 +37,7 @@ on early-init
 
 on post-fs
     # Symbols required for huawei blobs
-    export LD_SHIM_LIBS "/system/lib/libcutilz.so|libhuawei_cutilz.so"
+    export LD_SHIM_LIBS "/system/lib/libcutilz.so|libshim_cutilz.so:/system/lib/liblog.so|libshim_log.so"
 
 on fs
     wait /dev/block/bootdevice
