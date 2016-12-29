@@ -120,7 +120,7 @@ PRODUCT_PACKAGES += \
 
 # Compat symbols
 PRODUCT_PACKAGES += \
-    libhuawei_cutilz
+    libshim_cutils
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \

@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
-# Libcutilz
 include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := huawei_cutilz.c
-
-LOCAL_CLANG := true
-LOCAL_MODULE := libhuawei_cutilz
+LOCAL_SRC_FILES := hw_cutils.c
+LOCAL_MODULE := libshim_cutils
 LOCAL_MODULE_TAGS := optional
-
 include $(BUILD_SHARED_LIBRARY)
