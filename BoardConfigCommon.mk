@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
+#           (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -58,6 +59,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(VENDOR_PATH)/bluetooth
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_USES_LEGACY_MMAP := true
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_USE_VENDOR_CAMERA_EXT := true
 BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 

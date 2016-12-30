@@ -55,6 +55,10 @@ media.aac_51_output_enabled=true
 # Default to AwesomePlayer
 media.stagefright.use-awesome=false
 
+# HAX - remove ASAP
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
+
 #
 # system props for the data modules
 #
