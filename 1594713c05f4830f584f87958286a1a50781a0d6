@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a1d315d_d4ac1c38",
+        "filename": "init/init_cherry.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2016-12-30T09:07:16Z",
+      "side": 1,
+      "message": "I don\u0027t think you need this function.",
+      "revId": "1594713c05f4830f584f87958286a1a50781a0d6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
