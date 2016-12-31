@@ -252,10 +252,6 @@ int QCameraMemory::alloc(int count, int size, int heap_id)
 {
     int rc = OK;
 
-    if (mBufferCount < 0) {
-        mBufferCount = 0;
-    }
-
     int new_bufCnt = mBufferCount + count;
 
     if (new_bufCnt > MM_CAMERA_MAX_NUM_FRAMES) {

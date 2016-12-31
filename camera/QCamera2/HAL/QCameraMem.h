@@ -98,7 +98,7 @@ protected:
     int cacheOpsInternal(int index, unsigned int cmd, void *vaddr);
 
     bool m_bCached;
-    int mBufferCount;
+    uint8_t mBufferCount;
     struct QCameraMemInfo mMemInfo[MM_CAMERA_MAX_NUM_FRAMES];
     QCameraMemoryPool *mMemoryPool;
     cam_stream_type_t mStreamType;
