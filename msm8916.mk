@@ -118,8 +118,7 @@ PRODUCT_PACKAGES += \
 
 # Compat symbols
 PRODUCT_PACKAGES += \
-    libhuawei_cutilz \
-    libstlport
+    libhuawei_cutilz
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
