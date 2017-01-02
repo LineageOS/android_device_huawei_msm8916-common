@@ -2,3 +2,5 @@ allow mm-qcamerad system_data_file:dir { write remove_name add_name };
 
 # The current BSP's faceproc library still needs this
 #allow mm-qcamerad system_file:file execmod;
+
+allow mm-qcamerad system_data_file:sock_file unlink;
