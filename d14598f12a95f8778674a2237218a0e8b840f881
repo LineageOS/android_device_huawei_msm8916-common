@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa3479d7_1bed278c",
+        "filename": "libshims/hw_cutils.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2017-01-03T14:08:16Z",
+      "side": 1,
+      "message": "Can be removed I guess",
+      "range": {
+        "startLine": 81,
+        "startChar": 1,
+        "endLine": 87,
+        "endChar": 1
+      },
+      "revId": "d14598f12a95f8778674a2237218a0e8b840f881",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
