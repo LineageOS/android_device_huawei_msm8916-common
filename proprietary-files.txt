@@ -513,8 +513,8 @@ vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
 
 # Sensors
+vendor/etc/pdc_G620s_L01.txt
 vendor/lib/libcalmodule_akm.so
-vendor/lib/libcalmodule_gyroscope.so
 
 # Huawei
 bin/libqmi_oem_main
