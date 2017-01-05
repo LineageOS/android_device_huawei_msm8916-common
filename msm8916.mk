@@ -231,7 +231,6 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     calmodule.cfg \
-    libcalmodule_common \
     sensors.msm8916 \
     sensors.native
 
