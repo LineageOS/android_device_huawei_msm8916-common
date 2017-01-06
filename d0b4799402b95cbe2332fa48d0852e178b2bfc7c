@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa3479d7_80cab49f",
+        "filename": "msm8916.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2017-01-06T03:19:07Z",
+      "side": 1,
+      "message": "remove it",
+      "range": {
+        "startLine": 123,
+        "startChar": 18,
+        "endLine": 124,
+        "endChar": 15
+      },
+      "revId": "d0b4799402b95cbe2332fa48d0852e178b2bfc7c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
