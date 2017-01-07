@@ -116,7 +116,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 an
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_DTBTOOL_ARGS := -2
 TARGET_KERNEL_SOURCE := kernel/huawei/msm8916
-TARGET_KERNEL_CONFIG := cyanogenmod_cherry_defconfig
+TARGET_KERNEL_CONFIG := lineageos_cherry_defconfig
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
