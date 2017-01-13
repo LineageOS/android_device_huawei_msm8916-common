@@ -102,6 +102,14 @@ void vendor_load_properties()
         property_set("ro.build.description", "G620S-L02-user 4.4.4 GRJ90 C00B380 release-keys");
         property_set("ro.build.fingerprint", "Huawei/G620S-L02/hwG620S-L02:4.4.4/HuaweiG620S-L02/C00B380:user/release-keys");
     }
+    /* G620S-L03 */
+    else if (buf.find("G620S-L03") != std::string::npos) {
+        property_set("ro.product.model", "G620S-L03");
+        property_set("ro.product.device", "G620S-L03");
+        property_set("ro.build.product", "G620S-L03");
+        property_set("ro.build.description", "G620S-L03-user 4.4.4 GRJ90 C27B262 release-keys");
+        property_set("ro.build.fingerprint", "Huawei/G620S-L03/hwG620S-L03:4.4.4/HuaweiG620S-L03/C27B262:user/release-keys");
+    }
     /* Che1-CL10 */
     else if (buf.find("Che1-CL10") != std::string::npos) {
         property_set("ro.product.model", "Che1-CL10");
