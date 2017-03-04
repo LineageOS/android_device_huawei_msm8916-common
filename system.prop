@@ -17,8 +17,6 @@ persist.rild.nitz_short_ons_3=
 persist.radio.rat_on=combine
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-# Start in cdma mode
-ro.telephony.default_network=22
 ro.telephony.ril.config=simactivation
 persist.data.qmi.adb_logmask=0
 ro.hwpp.cust_ons_bin=true
@@ -76,8 +74,6 @@ ro.qualcomm.cabl=2
 
 #
 # System props for telephony
-# System prop to turn on CdmaLTEPhone always
-telephony.lteOnCdmaDevice=1
 persist.data.target=dpm1
 persist.radio.no_cons_man_roam=1
 #
