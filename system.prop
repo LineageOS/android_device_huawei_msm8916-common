@@ -1,165 +1,31 @@
-#
-# system.prop for msm8916
-#
-
-#rild.libpath=/system/lib/libreference-ril.so
-rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
-rild.libargs=-d /dev/smd0
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
-persist.radio.rat_on=combine
-ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
-ro.telephony.ril.config=simactivation
-persist.data.qmi.adb_logmask=0
-ro.hwpp.cust_ons_bin=true
-
-debug.sf.hw=1
-debug.egl.hw=1
-persist.hwc.mdpcomp.enable=true
-debug.mdpcomp.logs=0
-dalvik.vm.heapsize=36m
-dev.pm.dyn_samplingrate=1
-persist.demo.hdmirotationlock=false
-debug.enable.sglscale=1
-
-#ro.hdmi.enable=true
-#tunnel.decode=true
-#tunnel.audiovideo.decode=true
-#lpa.decode=false
-#lpa.use-stagefright=true
-#persist.speaker.prot.enable=false
-
-#system props for the MM modules
-media.stagefright.enable-player=true
-media.stagefright.enable-http=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-scan=true
-media.msm8939hw=0
-media.msm8929hw=0
-mm.enable.smoothstreaming=true
-mmp.enable.3g2=true
-media.aac_51_output_enabled=true
-
-# Default to AwesomePlayer
-media.stagefright.use-awesome=false
-
-#
-# system props for the data modules
-#
-ro.use_data_netmgrd=true
-persist.data.netmgrd.qos.enable=true
-
-#system props for time-services
-persist.timed.enable=true
-
-#
-# system prop for opengles version
-# 196608 is decimal for 0x30000 to report version 3
-# This setting will be added automatically on runtime based on chipset.
-# Do not enable this setting.
-# ro.opengles.version=196608
-
-# System property for cabl
-ro.qualcomm.cabl=2
-
-#
-# System props for telephony
-persist.data.target=dpm1
-persist.radio.no_cons_man_roam=1
-#
-# System props for bluetooh
-qcom.bluetooth.soc=smd
-# System prop to turn on hfp client
-bluetooth.hfp.client=1
-
-#Simulate sdcard on /data/media
-#
-persist.fuse_sdcard=true
-
-#
-#snapdragon value add features
-#
-ro.qc.sdk.audio.ssr=false
-##fluencetype can be "fluence" or "fluencepro" or "none"
+# Audio
 ro.qc.sdk.audio.fluencetype=none
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
-#Set for msm8916
-tunnel.audio.encode = false
-#Buffer size in kbytes for compress offload playback
-audio.offload.buffer.size.kb=64
-#Minimum duration for offload playback in secs
-audio.offload.min.duration.secs=30
-#Enable offload audio video playback by default
-audio.offload.video=true
-#enable voice path for PCM VoIP by default
-use.voice.path.for.pcm.voip=true
-#
-#System property for FM transmitter
-#
-ro.fm.transmitter=false
-#enable dsp gapless mode by default
-audio.offload.gapless.enabled=true
 
-#Audio voice concurrency related flags
-voice.playback.conc.disabled=true
-voice.record.conc.disabled=true
-voice.voip.conc.disabled=true
+# Display
+ro.sf.lcd_density=320
+ro.qualcomm.cabl=0
 
-# set max background services
-ro.config.max_starting_bg=8
-
-#property to enable user to access Google WFD settings
-persist.debug.wfd.enable=1
-#propery to enable VDS WFD solution
-persist.hwc.enable_vds=1
-
-#selects CoreSight configuration to enable
-persist.debug.coresight.config=stm-events
-
-#property to enable narrow search range for video encoding
-vidc.enc.narrow.searchrange=1
-
-#property to enable DS2 dap
-audio.dolby.ds2.enabled=true
-
-#HWUI properties
+# HWUI
 ro.hwui.text_large_cache_height=2048
-#Trim properties
-ro.sys.fw.use_trim_settings=true
-ro.sys.fw.empty_app_percent=50
-ro.sys.fw.trim_empty_percent=100
-ro.sys.fw.trim_cache_percent=100
-ro.sys.fw.trim_enable_memory=1073741824
 
-#Enable Delay service restart
-ro.am.reschedule_service=true
+# Radio
+persist.data.target=dpm1
+persist.radio.no_cons_man_roam=1
+persist.radio.sib16_support=1
+rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+ril.ecclist=000,08,100,101,102,110,112,118,119,120,122,911,999
+ril.ecclist1=000,08,100,101,102,110,112,118,119,120,122,911,999
+ro.telephony.ril.config=simactivation
+ro.hwpp.cust_ons_bin=true
 
-# Create zram disk
-ro.config.zram=true
+# disable camera debug spam
+persist.camera.hal.debug.mask=0
 
-# system property for PIP support
-persist.camera.pip.support=0
+# use 3 threads max for dex2oat
+ro.sys.fw.dex2oat_thread_count=3
 
-#Enable B service adj transition by default
-ro.sys.fw.bservice_enable=true
-ro.sys.fw.bservice_limit=5
-ro.sys.fw.bservice_age=5000
-
-#Optimal dex2oat threads for faster app installation
-ro.sys.fw.dex2oat_thread_count=4
-
-#min/max cpu in core control
-ro.core_ctl_min_cpu=2
-ro.core_ctl_max_cpu=4
+# Storage
+ro.sys.sdcardfs=true

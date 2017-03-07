@@ -36,14 +36,12 @@
 #include "log.h"
 #include "util.h"
 
-void vendor_load_properties()
+#include "init_msm8916.h"
+
+void init_target_properties()
 {
     std::ifstream fin;
     std::string buf;
-
-    std::string platform = property_get("ro.board.platform");
-    if (platform != ANDROID_TARGET)
-        return;
 
     fin.open("/proc/app_info");
     while (getline(fin, buf))
