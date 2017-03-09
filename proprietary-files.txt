@@ -522,7 +522,6 @@ bin/hw_test_diag
 etc/firmware/cherry_gis_fw.img
 etc/firmware/cherry_ofilm_fw.img
 etc/firmware/cherry_yassy_fw.img
-etc/firmware/fused_nvm_y635_cl00.bin
 etc/firmware/g620S_junda_fw.img
 etc/firmware/g620S_ofilm_fw.img
 etc/firmware/g620S_truly_fw.img
@@ -538,7 +537,3 @@ etc/firmware/goodix_ofilm_fw.bin
 etc/firmware/ice40.bin
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
-etc/firmware/Signedrompatch_v20.bin
-etc/firmware/Signedrompatch_v21.bin
-etc/firmware/Signedrompatch_v24.bin
-etc/firmware/Signedrompatch_v30.bin
