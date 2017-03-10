@@ -30,12 +30,6 @@ on post-fs
     export LD_SHIM_LIBS "/system/lib/libcutils.so|libshim_cutils.so:/system/bin/mm-qcamera-daemon|libqcamerasvr-c++.so"
 
 on boot
-
-    start hw_test_diag
-    start rmt_oeminfo
-    start libqmi_oem_main
-    start oeminfo_server
-
     # charger
     chown root system /sys/class/power_supply/bms/current_now
     chown root system /sys/class/power_supply/bms/voltage_ocv
@@ -82,24 +76,21 @@ service vm_bms /system/bin/vm_bms
     writepid /dev/cpuset/system-background/tasks
 
 service hw_test_diag /system/bin/hw_test_diag
+    class core
     user root
-    disabled
     writepid /dev/cpuset/system-background/tasks
 
 service rmt_oeminfo /system/bin/rmt_oeminfo
     class core
     user root
-    disabled
     writepid /dev/cpuset/system-background/tasks
 
 service libqmi_oem_main /system/bin/libqmi_oem_main
     class core
     user root
-    disabled
     writepid /dev/cpuset/system-background/tasks
 
 service oeminfo_server /system/bin/oeminfo_server
     class core
     user root
-    disabled
     writepid /dev/cpuset/system-background/tasks
