@@ -55,7 +55,7 @@ void init_target_properties()
         property_set("ro.product.device", "C8817D");
         property_set("ro.build.product", "C8817D");
         property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "8");
+        property_set("ro.telephony.default_network", "8,1");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.build.description", "C8817D-user 4.4.4 GRJ90 C92B381 release-keys");
         property_set("ro.build.fingerprint", "Huawei/C8817D/hwC8817D:4.4.4/HuaweiC8817D/C92B381:user/release-keys");
@@ -76,7 +76,7 @@ void init_target_properties()
         property_set("ro.product.device", "G621-TL00");
         property_set("ro.build.product", "G621-TL00");
         property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "17");
+        property_set("ro.telephony.default_network", "17,1");
         property_set("ro.build.description", "G621-TL00-user 4.4.4 GRJ90 C01B361SP01 release-keys");
         property_set("ro.build.fingerprint", "Honor/G621-TL00/hwG621-TL00:4.4.4/HonorG621-TL00/C01B361SP01:user/release-keys");
     }
@@ -86,7 +86,7 @@ void init_target_properties()
         property_set("ro.product.device", "G620S-UL00");
         property_set("ro.build.product", "G620S-UL00");
         property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "9");
+        property_set("ro.telephony.default_network", "9,1");
         property_set("ro.build.description", "G620S-UL00-user 4.4.4 GRJ90 C17B246 release-keys");
         property_set("ro.build.fingerprint", "Huawei/G620S-UL00/hwG620S-UL00:4.4.4/HuaweiG620S-UL00/C17B246:user/release-keys");
     }
@@ -114,7 +114,7 @@ void init_target_properties()
         property_set("ro.product.device", "Che1-CL10");
         property_set("ro.build.product", "Che1-CL10");
         property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "8");
+        property_set("ro.telephony.default_network", "8,1");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.build.description", "Che1-CL10-user 4.4.4 GRJ90 C92B275 release-keys");
         property_set("ro.build.fingerprint", "Honor/Che1-CL10/Che1:4.4.4/Che1-CL10/C92B275:user/ota-rel-keys,release-keys");
@@ -125,7 +125,7 @@ void init_target_properties()
         property_set("ro.product.device", "Che1-CL20");
         property_set("ro.build.product", "Che1-CL20");
         property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "22");
+        property_set("ro.telephony.default_network", "22,1");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("ro.build.description", "Che1-CL20-user 4.4.4 GRJ90 C00B275 release-keys");
         property_set("ro.build.fingerprint", "Honor/Che1-CL20/Che1:4.4.4/Che1-CL20/C00B275:user/ota-rel-keys,release-keys");
@@ -136,7 +136,7 @@ void init_target_properties()
         property_set("ro.product.device", "Che1-L04");
         property_set("ro.build.product", "Che1-L04");
         property_set("persist.radio.multisim.config", "dsds");
-        property_set("ro.telephony.default_network", "9");
+        property_set("ro.telephony.default_network", "9,1");
         property_set("ro.build.description", "Che1-L04-user 4.4.4 GRJ90 C900B130 release-keys");
         property_set("ro.build.fingerprint", "Honor/Che1-L04/Che1:4.4.4/Che1-L04/C900B130:user/ota-rel-keys,release-keys");
     }
