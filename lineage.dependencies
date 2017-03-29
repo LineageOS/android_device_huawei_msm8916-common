@@ -6,9 +6,5 @@
   {
     "repository": "android_kernel_huawei_msm8916",
     "target_path": "kernel/huawei/msm8916"
-  },
-  {
-    "repository": "android_device_qcom_common",
-    "target_path": "device/qcom/common"
   }
 ]
