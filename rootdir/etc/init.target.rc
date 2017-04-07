@@ -72,7 +72,7 @@ on charger
 service vm_bms /system/bin/vm_bms
     class core
     user root
-    group root
+    group root wakelock
     writepid /dev/cpuset/system-background/tasks
 
 service hw_test_diag /system/bin/hw_test_diag
