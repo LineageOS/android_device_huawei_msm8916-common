@@ -34,15 +34,14 @@ vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
-# GPS
--lib/libloc_api_v02.so
--lib/libloc_ds_api.so
-vendor/lib/hw/flp.default.so
-vendor/lib/libflp.so
-vendor/lib/libgeofence.so
-vendor/lib/libizat_core.so
-vendor/lib/liblbs_core.so
-vendor/lib/libquipc_os_api.so
+# GPS - from kipper
+-lib/libloc_api_v02.so|97d7144618ed9f6a54016aa52154a018b71a0ebf
+-lib/libloc_ds_api.so|e4964bc31bf2447330e953ec3cefcb5d8197611e
+vendor/lib/hw/flp.default.so|c281157957565dc35f7e1731b2c71a71a532a821
+vendor/lib/libflp.so|776aae670ffc63b1fbe27420729ee7bd9a6fbb0e
+vendor/lib/libgeofence.so|bd34516de3c933d81267822716235c358ab6695d
+vendor/lib/libizat_core.so|8a948e4f2aa38463050c6399f04ecb38564689d6
+vendor/lib/liblbs_core.so|19f18c99d01ed1934b2a6581d8a63d2144bbe6af
 
 # Graphics - from kipper
 vendor/lib/egl/eglsubAndroid.so|b164a3a31ec30498babb25f731e0a8225be8d0aa
