@@ -53,7 +53,6 @@ TARGET_USE_COMPAT_GRALLOC_ALIGN := true
 
 # Init
 TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(VENDOR_PATH)/init/init_cherry.cpp
-TARGET_UNIFIED_DEVICE := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/huawei/msm8916
