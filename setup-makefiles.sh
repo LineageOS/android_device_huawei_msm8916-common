@@ -39,8 +39,8 @@ setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 # Copyright headers and guards
 write_headers "che10 cherry"
 
-write_makefiles "$MY_DIR"/proprietary-files.txt
-write_makefiles "$MY_DIR"/proprietary-files-qc.txt
+write_makefiles "$MY_DIR"/proprietary-files.txt true
+write_makefiles "$MY_DIR"/proprietary-files-qc.txt true
 
 # Finish
 write_footers
@@ -53,7 +53,7 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
     write_headers
 
     # The standard device blobs
-    write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt
+    write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt true
 
     # We are done!
     write_footers
