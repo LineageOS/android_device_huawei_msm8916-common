@@ -1,8 +1,8 @@
 # Camera
-bin/mm-qcamera-daemon
-lib/liboeminfo.so
-lib/libmmcamera_interface.so
-lib/libmm-qcamera.so
+vendor/bin/mm-qcamera-daemon
+vendor/lib/liboeminfo.so
+vendor/lib/libmmcamera_interface.so
+vendor/lib/libmm-qcamera.so
 vendor/lib/libqc-opt.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
@@ -91,7 +91,7 @@ vendor/lib/libactuator_s5k4e1_liteon_13p1_camcorder.so
 vendor/lib/libactuator_s5k4e1_liteon_13p1_camera.so
 
 # Camera chromatix
-lib/libchromatix_imx135_liveshot.so
+vendor/lib/libchromatix_imx135_liveshot.so
 vendor/lib/libchromatix_gc2355_ofilm_ohw2f03_common.so
 vendor/lib/libchromatix_gc2355_ofilm_ohw2f03_default_video.so
 vendor/lib/libchromatix_gc2355_ofilm_ohw2f03_preview.so
@@ -397,10 +397,10 @@ vendor/lib/libchromatix_skuf_ov12830_p12v01c_video_hd.so
 vendor/lib/libchromatix_skuf_ov12830_p12v01c_zsl.so
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
-etc/firmware/cpp_firmware_v1_4_0.fw
+vendor/firmware/cpp_firmware_v1_1_1.fw
+vendor/firmware/cpp_firmware_v1_1_6.fw
+vendor/firmware/cpp_firmware_v1_2_0.fw
+vendor/firmware/cpp_firmware_v1_4_0.fw
 
 # Camera sensors
 vendor/lib/libmmcamera_gc2355_ofilm_ohw2f03.so
@@ -465,14 +465,14 @@ vendor/lib/libmmcamera_sunny_q13v04b_eeprom.so
 vendor/lib/libmmcamera_truly_cm7700_eeprom.so
 
 # Qualcomm framework
-bin/irsc_util
-bin/oeminfo_server
-etc/data/dsi_config.xml
-etc/data/netmgr_config.xml
--lib/libhuawei_secure.so
--lib/liboeminfo_oem_api.so
-lib/libqmi_nv_api.so
--lib/libqmi_oem_api.so
+vendor/bin/irsc_util
+vendor/bin/oeminfo_server
+vendor/etc/data/dsi_config.xml
+vendor/etc/data/netmgr_config.xml
+-vendor/lib/libhuawei_secure.so
+-vendor/lib/liboeminfo_oem_api.so
+vendor/lib/libqmi_nv_api.so
+-vendor/lib/libqmi_oem_api.so
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
@@ -492,15 +492,14 @@ vendor/lib/libsmemlog.so
 
 # Radio
 -app/shutdownlistener/shutdownlistener.apk
-bin/netmgrd
-bin/qmuxd
-bin/radish
-bin/rmt_storage
-etc/ons.bin
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 framework/qcnvitems.jar
 framework/qcrilhook.jar
+vendor/bin/netmgrd
+vendor/bin/qmuxd
+vendor/bin/radish
+vendor/bin/rmt_storage
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/lib/libconfigdb.so
 vendor/lib/libmdmdetect.so
@@ -510,30 +509,31 @@ vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
+vendor/ons.bin
 
 # Sensors
 vendor/etc/pdc_G620s_L01.txt
 vendor/lib/libcalmodule_akm.so
 
 # Huawei
-bin/libqmi_oem_main
-bin/rmt_oeminfo
-bin/hw_test_diag
-etc/firmware/cherry_gis_fw.img
-etc/firmware/cherry_ofilm_fw.img
-etc/firmware/cherry_yassy_fw.img
-etc/firmware/g620S_junda_fw.img
-etc/firmware/g620S_ofilm_fw.img
-etc/firmware/g620S_truly_fw.img
-etc/firmware/g660S_ofilm_fw.img
-etc/firmware/g660S_truly_fw.img
-etc/firmware/g760-HB3748B8EBC_FMT_ATL.fw
-etc/firmware/g760-HB3748B8EBC_LS_LS.fw
-etc/firmware/g760-HB3748B8EBC_XWD_SDI.fw
-etc/firmware/g760L_lensone_fw.img
-etc/firmware/g760L_ofilm_fw.img
-etc/firmware/goodix_new_ofilm_fw.bin
-etc/firmware/goodix_ofilm_fw.bin
-etc/firmware/ice40.bin
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
+vendor/bin/libqmi_oem_main
+vendor/bin/rmt_oeminfo
+vendor/bin/hw_test_diag
+vendor/firmware/cherry_gis_fw.img
+vendor/firmware/cherry_ofilm_fw.img
+vendor/firmware/cherry_yassy_fw.img
+vendor/firmware/g620S_junda_fw.img
+vendor/firmware/g620S_ofilm_fw.img
+vendor/firmware/g620S_truly_fw.img
+vendor/firmware/g660S_ofilm_fw.img
+vendor/firmware/g660S_truly_fw.img
+vendor/firmware/g760-HB3748B8EBC_FMT_ATL.fw
+vendor/firmware/g760-HB3748B8EBC_LS_LS.fw
+vendor/firmware/g760-HB3748B8EBC_XWD_SDI.fw
+vendor/firmware/g760L_lensone_fw.img
+vendor/firmware/g760L_ofilm_fw.img
+vendor/firmware/goodix_new_ofilm_fw.bin
+vendor/firmware/goodix_ofilm_fw.bin
+vendor/firmware/ice40.bin
+vendor/firmware/leia_pfp_470.fw
+vendor/firmware/leia_pm4_470.fw

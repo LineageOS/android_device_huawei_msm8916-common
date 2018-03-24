@@ -39,12 +39,12 @@ using namespace android;
 #define MAX_CAL_CFG_LEN	1024
 
 /* Calibration library config files */
-#define CAL_LIB_CFG_PATH	"/system/vendor/etc/calmodule.cfg"
+#define CAL_LIB_CFG_PATH	"/vendor/etc/calmodule.cfg"
 #define DEFAULT_CAL_LIB		"libcalmodule_common.so"
 #if defined(__LP64__)
-#define CAL_LIB_PATH	"/system/vendor/lib64/"
+#define CAL_LIB_PATH	"/vendor/lib64/"
 #else
-#define CAL_LIB_PATH	"/system/vendor/lib/"
+#define CAL_LIB_PATH	"/vendor/lib/"
 #endif
 
 class CalibrationManager : public Singleton<CalibrationManager> {

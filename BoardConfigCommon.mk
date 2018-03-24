@@ -114,7 +114,7 @@ USE_SENSOR_MULTI_HAL := true
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /system/lib/libcutils.so|libshim_cutils.so \
-    /system/bin/mm-qcamera-daemon|libqcamerasvr-c++.so
+    /vendor/bin/mm-qcamera-daemon|libqcamerasvr-c++.so
 
 # Wifi
 TARGET_PROVIDES_WCNSS_QMI := true
