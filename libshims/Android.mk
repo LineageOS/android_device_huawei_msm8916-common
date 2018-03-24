@@ -18,4 +18,5 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := hw_cutils.c
 LOCAL_MODULE := libshim_cutils
 LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
