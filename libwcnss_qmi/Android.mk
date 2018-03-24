@@ -31,6 +31,7 @@ LOCAL_SRC_FILES := \
 LOCAL_MODULE := libwcnss_qmi
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS += -Wall
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
