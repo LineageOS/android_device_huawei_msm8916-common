@@ -1,9 +1,9 @@
-# ADSP
-bin/adsprpcd
+# ADSP - from jalebi
+vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 
-# Audio
+# Audio - from jalebi
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -14,21 +14,21 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
-# Battery
-bin/vm_bms
+# Battery - from jalebi
+vendor/bin/vm_bms
 
-# Bluetooth
-bin/btnvtool
-bin/hci_qcomm_init
+# Bluetooth - from jalebi
+vendor/bin/btnvtool
+vendor/bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
-# CNE
+# CNE - from oneplus3
 vendor/lib/com.quicinc.cne.api@1.0.so
 vendor/lib/com.quicinc.cne.constants@1.0.so
 vendor/lib/libcneapiclient.so
 
-# DRM
-bin/qseecomd
+# DRM - from jalebi
+vendor/bin/qseecomd
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libQSEEComAPI.so
@@ -36,8 +36,8 @@ vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
 # GPS - from crackling
--lib/libloc_api_v02.so
--lib/libloc_ds_api.so
+-vendor/lib/libloc_api_v02.so
+-vendor/lib/libloc_ds_api.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
@@ -72,21 +72,21 @@ vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
-# Graphics firmware
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
+# Graphics firmware - from jalebi
+vendor/firmware/a300_pfp.fw
+vendor/firmware/a300_pm4.fw
 
-# Media
+# Media - from jalebi
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 
-# Perf
+# Perf - from jalebi
 vendor/bin/perfd
 vendor/lib/libqti-perfd-client.so
 
-# Postprocessing
-bin/mm-pp-daemon
+# Postprocessing - from jalebi
+vendor/bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so
 vendor/lib/libmm-abl.so
 vendor/lib/libmm-abl-oem.so
@@ -94,25 +94,25 @@ vendor/lib/libmm-als.so
 vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-qdcm.so
 
-# Thermal
+# Thermal - from jalebi
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
-# Time services
--app/TimeService/TimeService.apk
-bin/time_daemon
+# Time services - from jalebi
+-vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
 -vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
 
-# Venus (media) firmware
-etc/firmware/venus.b00
-etc/firmware/venus.b01
-etc/firmware/venus.b02
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mbn
-etc/firmware/venus.mdt
+# Venus (media) firmware - from jalebi
+vendor/firmware/venus.b00
+vendor/firmware/venus.b01
+vendor/firmware/venus.b02
+vendor/firmware/venus.b03
+vendor/firmware/venus.b04
+vendor/firmware/venus.mbn
+vendor/firmware/venus.mdt
 
 # Widevine - from crackling
 vendor/lib/libwvdrm_L3.so
