@@ -53,7 +53,7 @@ on boot
     chown nfc nfc /dev/pn544
 
 on post-fs
-    swapon_all /fstab.qcom
+    swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/page-cluster 0
 
 on charger
