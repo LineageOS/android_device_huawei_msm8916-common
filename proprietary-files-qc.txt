@@ -102,7 +102,7 @@ vendor/lib/libthermalioctl.so
 # Time services - from jalebi
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
--vendor/lib/libtime_genoff.so
+vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
 
 # Venus (media) firmware - from jalebi
