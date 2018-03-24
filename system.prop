@@ -26,6 +26,3 @@ persist.camera.hal.debug.mask=0
 
 # use 3 threads max for dex2oat
 ro.sys.fw.dex2oat_thread_count=3
-
-# Storage
-ro.sys.sdcardfs=true
