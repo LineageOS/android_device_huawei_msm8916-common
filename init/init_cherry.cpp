@@ -63,9 +63,8 @@ void property_override_dual(char const system_prop[], char const vendor_prop[], 
 
 void set_model(const char *model) {
     property_override("ro.build.product", model);
-    property_override("ro.product.device", model);
-    property_override("ro.product.model", model);
-    property_override("ro.vendor.product.device", model);
+    property_override_dual("ro.product.device", "ro.vendor.product.device", model);
+    property_override_dual("ro.product.model", "ro.vendor.product.model", model);
 }
 
 void init_target_properties()
