@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc
 
+# RIL
+PRODUCT_PACKAGES += \
+    libril-wrapper
+
 # Sensors HAL
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
