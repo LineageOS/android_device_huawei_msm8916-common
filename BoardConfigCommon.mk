@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
-#           (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -36,10 +36,9 @@ BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# CMHW
+# Lineage Hardware
 BOARD_HARDWARE_CLASS += \
-    $(VENDOR_PATH)/cmhw
-TARGET_TAP_TO_WAKE_NODE := "/sys/touch_screen/easy_wakeup_gesture"
+    $(VENDOR_PATH)/lineagehw
 
 # Flags
 BOARD_NO_SECURE_DISCARD := true
@@ -55,6 +54,9 @@ TARGET_USE_COMPAT_GRALLOC_ALIGN := true
 TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(VENDOR_PATH)/init/init_cherry.cpp
 
 # Kernel
+BOARD_DTBTOOL_ARGS := -2
+BOARD_KERNEL_IMAGE_NAME := zImage
+BOARD_KERNEL_SEPARATED_DT := true
 TARGET_KERNEL_SOURCE := kernel/huawei/msm8916
 TARGET_KERNEL_CONFIG := lineageos_cherry_defconfig
 
@@ -73,6 +75,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1860648960
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
+
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/touch_screen/easy_wakeup_gesture"
 
 # Properties
 TARGET_SYSTEM_PROP := $(VENDOR_PATH)/system.prop
@@ -110,4 +115,4 @@ USE_SENSOR_MULTI_HAL := true
 TARGET_PROVIDES_WCNSS_QMI := true
 
 # inherit from the proprietary version
--include vendor/huawei/msm8916-common/BoardConfigVendor.mk
+include vendor/huawei/msm8916-common/BoardConfigVendor.mk

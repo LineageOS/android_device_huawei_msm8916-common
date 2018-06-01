@@ -52,7 +52,11 @@ static inline const char* BtmGetDefaultName()
 	return "";
 }
 
-#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
-#define BLUETOOTH_QTI_SW TRUE
-#define BLE_VND_INCLUDED   TRUE
+#define BTM_DEF_LOCAL_NAME        BtmGetDefaultName()
+
+#define BLE_VND_INCLUDED          TRUE
+#define BLUETOOTH_QTI_SW          TRUE
+#define BT_CLEAN_TURN_ON_DISABLED TRUE
+#define MAX_ACL_CONNECTIONS       7
+
 #endif

@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product-if-exists, vendor/huawei/msm8916-common/msm8916-common-vendor.mk)
+$(call inherit-product, vendor/huawei/msm8916-common/msm8916-common-vendor.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
@@ -72,6 +72,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@1.0-impl \
     camera.msm8916 \
     Snap
 
@@ -97,6 +99,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.msm8916
 
 # Media
@@ -119,6 +122,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors HAL
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
     calmodule.cfg \
     sensors.msm8916 \
     sensors.native
@@ -127,7 +131,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # USB ID
-ADDITIONAL_DEFAULT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.usb.id.midi=90BA \
     ro.usb.id.midi_adb=90BB \
     ro.usb.id.mtp=1051 \
