@@ -8,9 +8,6 @@ persist.vendor.audio.fluence.speaker=true
 ro.sf.lcd_density=320
 ro.qualcomm.cabl=0
 
-# HWUI
-ro.hwui.text_large_cache_height=2048
-
 # Radio
 persist.data.target=dpm1
 persist.radio.no_cons_man_roam=1
