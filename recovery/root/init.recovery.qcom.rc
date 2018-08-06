@@ -1,4 +1,5 @@
 # Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,10 +13,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import init.qcom.power.rc
+on fs
+    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
 
 on init
-    mkdir /cust
+    chmod 0660 /dev/vm_bms
+    chown system system /dev/vm_bms
+    chmod 0660 /dev/battery_data
+    chown system system /dev/battery_data
 
     # vm_bms
     chown root system /sys/class/power_supply/bms/current_now
@@ -28,3 +34,4 @@ service vm_bms /sbin/vm_bms
     user root
     group root
     disabled
+    seclabel u:r:init:s0
