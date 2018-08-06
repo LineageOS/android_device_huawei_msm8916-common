@@ -8,6 +8,9 @@ persist.vendor.audio.fluence.speaker=true
 ro.sf.lcd_density=320
 ro.qualcomm.cabl=0
 
+# Factory reset protection
+ro.frp.pst=/dev/block/bootdevice/by-name/config
+
 # Radio
 persist.data.target=dpm1
 persist.radio.no_cons_man_roam=1
