@@ -85,23 +85,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/touch_screen/easy_wakeup_gesture"
 TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 
 # Recovery
-TARGET_RECOVERY_DEVICE_DIRS += $(VENDOR_PATH)
-#RECOVERY_VARIANT := twrp
-ifneq ($(RECOVERY_VARIANT),twrp)
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/recovery/recovery.fstab
-else
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/recovery/twrp.fstab
-RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
-DEVICE_RESOLUTION := 720x1280
-RECOVERY_SDCARD_ON_DATA := true
-TW_NEW_ION_HEAP := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_TARGET_USES_QCOM_BSP := true
-TW_EXTRA_LANGUAGES := true
-TW_INPUT_BLACKLIST := "accelerometer\x0alis3dh-accel"
-TARGET_RECOVERY_QCOM_RTC_FIX := true
-BOARD_SUPPRESS_SECURE_ERASE := true
-endif
 
 # RIL
 BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11
@@ -117,6 +101,18 @@ USE_SENSOR_MULTI_HAL := true
 TARGET_LD_SHIM_LIBS += \
     /system/lib/libcutils.so|libshim_cutils.so \
     /vendor/bin/mm-qcamera-daemon|libqcamerasvr-c++.so
+
+# TWRP
+ifeq ($(WITH_TWRP),true)
+RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TARGET_RECOVERY_DEVICE_DIRS += $(VENDOR_PATH)
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_EXTRA_LANGUAGES := true
+TW_INPUT_BLACKLIST := "accelerometer\x0alis3dh-accel\x0ahbtp_vm"
+TW_THEME := portrait_hdpi
+TW_USE_TOOLBOX := true
+endif
 
 # Wifi
 TARGET_PROVIDES_WCNSS_QMI := true
