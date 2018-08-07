@@ -63,6 +63,9 @@ TARGET_KERNEL_CONFIG := lineageos_cherry_defconfig
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Mainfest
+DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/configs/manifest.xml
+
 # Partitions
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
