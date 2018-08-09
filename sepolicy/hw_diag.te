@@ -3,6 +3,7 @@ type hw_diag_exec, exec_type, file_type;
 
 init_daemon_domain(hw_diag)
 
-allow hw_diag diag_device:chr_file { ioctl open read write };
+allow hw_diag diag_device:chr_file rw_file_perms;
 allow hw_diag self:capability dac_override;
-allow hw_diag self:socket { bind create ioctl read write };
+allow hw_diag self:socket create_socket_perms_no_ioctl; #FIXME
+allow hw_diag properties_device:dir r_dir_perms;

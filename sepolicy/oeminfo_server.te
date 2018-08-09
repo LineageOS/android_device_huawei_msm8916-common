@@ -3,7 +3,7 @@ type oeminfo_server_exec, exec_type, file_type;
 type oeminfo_server_partition_device, dev_type;
 init_daemon_domain(oeminfo_server)
 
-allow oeminfo_server oeminfo_partition_device:blk_file { open read write };
+allow oeminfo_server oeminfo_partition_device:blk_file rw_file_perms;
 allow oeminfo_server self:capability { chown fowner fsetid };
 allow oeminfo_server socket_device:dir { add_name write };
 allow oeminfo_server socket_device:sock_file { create setattr };

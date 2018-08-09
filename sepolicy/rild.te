@@ -1,1 +1,2 @@
 allow rild libqmi_oem_main:unix_stream_socket connectto;
+allow rild system_file:file execute_no_trans;
