@@ -3,5 +3,6 @@ type oeminfo_exec, exec_type, file_type;
 type oeminfo_partition_device, dev_type;
 init_daemon_domain(oeminfo)
 
-allow oeminfo oeminfo_partition_device:blk_file { open read write };
-allow oeminfo self:socket { bind create ioctl read write };
+allow oeminfo oeminfo_partition_device:blk_file rw_file_perms;
+allow oeminfo self:socket create_socket_perms_no_ioctl; #FIXME
+allow oeminfo properties_device:dir r_dir_perms;

@@ -2,10 +2,11 @@ type libqmi_oem_main, domain;
 type libqmi_oem_main_exec, exec_type, file_type;
 init_daemon_domain(libqmi_oem_main)
 
-allow libqmi_oem_main diag_device:chr_file { ioctl open read write };
+allow libqmi_oem_main diag_device:chr_file rw_file_perms;
 allow libqmi_oem_main qmuxd:unix_stream_socket connectto;
-allow libqmi_oem_main qmuxd_socket:dir { add_name search write };
-allow libqmi_oem_main qmuxd_socket:sock_file { create setattr write };
+allow libqmi_oem_main qmuxd_socket:dir rw_dir_perms;
+allow libqmi_oem_main qmuxd_socket:sock_file create_file_perms;
 allow libqmi_oem_main self:capability { dac_override fsetid };
-allow libqmi_oem_main self:socket { create ioctl read write };
+allow libqmi_oem_main self:socket create_socket_perms_no_ioctl; #FIXME
 allow libqmi_oem_main sysfs:file { open read };
+allow libqmi_oem_main properties_device:dir r_dir_perms;
