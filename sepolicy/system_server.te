@@ -1,2 +1,0 @@
-allow system_server libqmi_oem_main:unix_stream_socket connectto;
-allow system_server shell_exec:file { execute execute_no_trans r_file_perms };
