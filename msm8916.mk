@@ -120,6 +120,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Tag \
+    android.hardware.nfc@1.0-impl \
     android.hardware.nfc@1.0-service
 
 PRODUCT_COPY_FILES += \
