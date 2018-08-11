@@ -93,7 +93,8 @@ TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/recovery/recovery.fstab
 BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_11
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+# BOARD_SEPOLICY_DIRS += \
     $(VENDOR_PATH)/sepolicy
 
 # Sensors
