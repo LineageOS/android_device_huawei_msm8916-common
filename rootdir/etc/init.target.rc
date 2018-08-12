@@ -90,3 +90,9 @@ service oeminfo_server /vendor/bin/oeminfo_server
     class core
     user root
     writepid /dev/cpuset/system-background/tasks
+
+service bt-mac-generator /vendor/bin/bt-mac-generator
+    class late_start
+    user bluetooth
+    group bluetooth
+    oneshot
