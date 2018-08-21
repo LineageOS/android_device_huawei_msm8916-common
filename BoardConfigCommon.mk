@@ -86,6 +86,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/touch_screen/easy_wakeup_gesture"
 TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 
 # Recovery
+BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/recovery/recovery.fstab
 
 # RIL
