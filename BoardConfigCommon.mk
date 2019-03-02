@@ -20,6 +20,8 @@ include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
 VENDOR_PATH := device/huawei/msm8916-common
 
+BUILD_FINGERPRINT := "Huawei/C8817D/hwC8817D:4.4.4/HuaweiC8817D/C92B381:user/release-keys"
+
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
 
