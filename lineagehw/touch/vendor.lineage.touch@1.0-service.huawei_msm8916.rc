@@ -1,0 +1,8 @@
+on boot
+    chown system system /sys/touch_screen/glove_func/signal_disparity
+    chmod 0660 /sys/touch_screen/glove_func/signal_disparity
+
+service touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.huawei_msm8916
+    class hal
+    user system
+    group system

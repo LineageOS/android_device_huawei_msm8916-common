@@ -44,7 +44,6 @@ on boot
     write /sys/block/mmcblk0/bdi/read_ahead_kb 128
 
     # touchscreen
-    chown system system /sys/touch_screen/glove_func/signal_disparity
     chown system system /sys/touch_screen/easy_wakeup_gesture
 
     # NFC
