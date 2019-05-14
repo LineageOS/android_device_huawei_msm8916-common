@@ -3,6 +3,4 @@
 /(vendor|system/vendor)/bin/rmt_oeminfo                             u:object_r:oeminfo_exec:s0
 /(vendor|system/vendor)/bin/oeminfo_server                          u:object_r:oeminfo_server_exec:s0
 /(vendor|system/vendor)/bin/hw_test_diag                            u:object_r:hw_diag_exec:s0
-/proc/app_info                                                      u:object_r:proc_appinfo:s0
-/sys/touch_screen/easy_wakeup_gesture                               u:object_r:sysfs_touchscreen:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.huawei_msm8916                  u:object_r:hal_lineage_touch_default_exec:s0

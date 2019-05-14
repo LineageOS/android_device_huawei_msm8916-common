@@ -1,5 +1,5 @@
 type hw_diag, domain;
-type hw_diag_exec, exec_type, file_type;
+type hw_diag_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(hw_diag)
 

@@ -1,5 +1,5 @@
 type oeminfo_server, domain;
-type oeminfo_server_exec, exec_type, file_type;
+type oeminfo_server_exec, exec_type, vendor_file_type, file_type;
 type oeminfo_server_partition_device, dev_type;
 init_daemon_domain(oeminfo_server)
 
